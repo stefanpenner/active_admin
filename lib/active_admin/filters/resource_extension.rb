@@ -60,11 +60,7 @@ module ActiveAdmin
 
       # Returns a default set of filters for the associations
       def default_association_filters
-        if resource_class.respond_to?(:reflections)
-          resource_class.reflections.collect{|name, r| { :attribute => name }}
-        else
-          []
-        end
+        []
       end
 
       # Returns a default set of filters for the content columns
